@@ -39,8 +39,8 @@ namespace DevAPI.Controllers
             return Ok(devEvent);
         }
 
-        [HttpPost("{id}")]
-        public IActionResult Post(Guid id,DevEvents devEvents)
+        [HttpPost]
+        public IActionResult Post(DevEvents devEvents)
         {
             _context.DevEvents.Add(devEvents);
 
